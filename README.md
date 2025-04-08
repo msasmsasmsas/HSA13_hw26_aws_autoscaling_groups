@@ -1,4 +1,4 @@
-# HSA13_hw26 AWS FastAPI Autoscaling Groups on AWS
+# HSA13_hw26 FastAPI Autoscaling Groups on AWS
 
 This project demonstrates how to deploy a simple FastAPI application in Docker containers on AWS using Auto Scaling Groups managed by Terraform. The infrastructure includes a VPC, subnets, an Application Load Balancer (ALB), and an autoscaling group of EC2 instances running the FastAPI app.
 Features
