@@ -15,32 +15,22 @@ Features
     An AWS account with configured credentials (~/.aws/credentials).
     A Docker Hub account to push the container image.
 
-##  Project Structure
-text
-├── app.py              # FastAPI application code
-├── Dockerfile          # Docker configuration for building the app image
-├── docker-compose.yml  # Docker Compose for local testing
-├── requirements.txt    # Python dependencies
-├── terraform/          # Terraform configuration files
-│   ├── main.tf         # Main infrastructure definition
-│   ├── variables.tf    # Variable definitions
-│   └── terraform.tfvars # Variable values
-└── README.md           # This file
+
 ##  Local Setup and Testing
 
-    Clone the repository:
+### 1. Clone the repository:
     
 ```
 git clone <repository-url>
 cd <repository-directory>
 ```
-Build and run locally with Docker Compose:
+### 2. Build and run locally with Docker Compose:
 
 ```
 
     docker-compose up --build
 ```
-    Test the app:
+### 3. Test the app:
         Open your browser and go to http://localhost:8000.
         You should see: {"message": "Hello World from FastAPI in Docker on AWS!"}.
 
