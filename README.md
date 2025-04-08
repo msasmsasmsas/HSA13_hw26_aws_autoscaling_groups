@@ -36,25 +36,25 @@ cd <repository-directory>
 
 ##  Deploying to AWS
 
-    Build and push the Docker image:
+### 1. Build and push the Docker image:
     
 ```
 docker build -t <your-dockerhub-username>/fastapi-app:latest .
 docker push <your-dockerhub-username>/fastapi-app:latest
 ```
-Update Terraform configuration:
+### 2. Update Terraform configuration:
 
     In terraform/main.tf, replace <your-dockerhub-username> in the user_data script with your Docker Hub username.
     Adjust variables in terraform/terraform.tfvars as needed (e.g., region, AMI ID, instance type).
 
-Deploy the infrastructure:
+### 3. Deploy the infrastructure:
 
 ```
     cd terraform
     terraform init
     terraform apply
 ```
-    Access the app:
+### 4. Access the app:
         After deployment, Terraform will output the ALB DNS name (e.g., web-alb-123456789.us-west-2.elb.amazonaws.com).
         Open this URL in your browser to access the FastAPI app.
 
